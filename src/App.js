@@ -3,7 +3,9 @@ const cors = require('cors');
 
 const AppRutas = require("./Routes/App.routes")
 const config = require('./Config');
+const initSetup = require('./Libs/ServerStartup')
 
+initSetup();
 const app = express();
 app.set("port", config.PORT);
 app.use(express.json())

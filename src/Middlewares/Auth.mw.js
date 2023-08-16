@@ -1,6 +1,7 @@
 const jwt = require('jsonwebtoken');
+const config = require('../Config');
 
-const secret = process.env.JWT_SECRET;
+const secret = config.JWT_SECRET;
 
 const auth = async (req, res, next) => {
     try {
